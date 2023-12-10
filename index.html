@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="js/scripts.js" defer></script>
+    <title>Conversor de Moeda</title>
+  </head>
+  <body>
+    <main>
+      <h1>Conversor de Moeda</h1>
+      <form id="convertForm">
+        <label>
+          Converter <span class="strong">de</span>
+          <select>
+            <option value="real" selected>R$ Real brasileiro</option>
+          </select>
+        </label>
+        <label>
+          Converter <span class="strong">para</span>
+          <select id="selectCurrency">
+            <option value="dollar" selected>US$ Dólar americano</option>
+            <option value="euro">€ Euro</option>
+            <option value="libra">£ Libra</option>
+          </select>
+        </label>
+        <label>
+          <span class="strong">Valor</span>
+          <input
+            type="number"
+            name="value"
+            id="inputCurrencyValue"
+            placeholder="R$ 10.000,00"
+            required
+          />
+        </label>
+        <button type="button" id="convertBtn">Converter</button>
+      </form>
+      <section id="convertResult">
+        <div class="result">
+          <figure>
+            <img src="./img/brazil-flag.png" alt="Imagem da bandeira Brasil" />
+            <figcaption>Real</figcaption>
+          </figure>
+          <h3 id="convertValue">0</h3>
+        </div>
+        <div id="convertArrow">
+          <img src="./img/convert-arrow.svg" alt="Seta" />
+        </div>
+        <div class="result">
+          <figure>
+            <img
+              src="./img/usa-flag.png"
+              alt="Imagem da bandeira dos Estados Unidos"
+              id="currencyImg"
+            />
+            <figcaption id="currencyName">Dólar</figcaption>
+          </figure>
+          <h3 id="convertedCurrencyValue">0</h3>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

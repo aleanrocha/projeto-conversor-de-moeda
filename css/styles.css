@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #243b55, #141e30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  width: 95%;
+  max-width: 480px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main h1 {
+  color:  #141e30;
+  margin-bottom: 24px;
+}
+
+/* Formulário */
+
+form label {
+  color: #777;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+form label .strong {
+  font-weight: 700;
+}
+form input, select {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 18px;
+  width: 100%;
+  margin: 6px 0 24px 0;
+  outline: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+form input:focus {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+form button {
+  background-color: #243b55;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 15px;
+  margin-bottom: 24px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background-color: #141e30;
+}
+
+/* Seção de Resultados */
+
+main #convertResult {
+  width: 100%;
+  border: 1px solid #243b55;
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+main #convertResult #convertArrow img {
+  transform: rotate(-90deg);
+  width: 35px;
+  height: 49.939px;
+}
+section#convertResult .result {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+section#convertResult .result img {
+  width: 44px;
+  height: 44px;
+}
+section#convertResult .result figcaption {
+  color: #777;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 6px;
+  
+}
+section#convertResult .result h3 {
+  color: #555;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 380px) {
+  h1 {
+    text-align: center;
+  }
+  main #convertResult {
+   flex-direction: column;
+  }
+  main #convertResult #convertArrow img {
+    transform: rotate(0);
+  }
+}
